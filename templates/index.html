@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Medical Translator</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Medical Voice Translator</h1>
+            <p class="subtitle">Real-time medical translation service</p>
+        </header>
+
+        <div class="settings-panel">
+            <div class="language-selectors">
+                <div class="language-input">
+                    <label for="sourceLanguage">I Speak</label>
+                    <select id="sourceLanguage">
+                        <option value="en-US" selected>English (USA)</option>
+                        <option value="en-GB">English (UK)</option>
+                        <option value="en-AU">English (Australia)</option>
+                        <option value="en-CA">English (Canada)</option>
+                        <option value="es-ES">Spanish (Spain)</option>
+                        <option value="es-MX">Spanish (Mexico)</option>
+                        <option value="fr-FR">French (France)</option>
+                        <option value="fr-CA">French (Canada)</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt-BR">Portuguese (Brazil)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ru">Russian</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ko">Korean</option>
+                    </select>
+                </div>
+                <div class="language-input">
+                    <label for="targetLanguage">Translate To</label>
+                    <select id="targetLanguage">
+                        <option value="en-US">English (USA)</option>
+                        <option value="en-GB">English (UK)</option>
+                        <option value="en-AU">English (Australia)</option>
+                        <option value="en-CA">English (Canada)</option>
+                        <option value="es-ES" selected>Spanish (Spain)</option>
+                        <option value="es-MX">Spanish (Mexico)</option>
+                        <option value="fr-FR">French (France)</option>
+                        <option value="fr-CA">French (Canada)</option>
+                        <option value="de">German</option>
+                        <option value="it">Italian</option>
+                        <option value="pt-BR">Portuguese (Brazil)</option>
+                        <option value="ja">Japanese</option>
+                        <option value="zh">Chinese</option>
+                        <option value="ru">Russian</option>
+                        <option value="hi">Hindi</option>
+                        <option value="ko">Korean</option>
+                    </select>
+                </div>
+            </div>
+            <div class="action-buttons">
+                <button id="startButton" class="primary-button" disabled>Start Listening</button>
+                <button id="stopButton" class="secondary-button" disabled>Stop</button>
+            </div>
+        </div>
+
+        <div class="transcription-container">
+            <div class="transcript-panel">
+                <div class="panel-header">
+                    <h2>Original Speech <span id="sourceTag" class="language-tag">EN-US</span></h2>
+                </div>
+                <div id="transcriptOutput" class="output-area">
+                    <div class="placeholder-text">Waiting to start listening...</div>
+                </div>
+            </div>
+
+            <div class="transcript-panel">
+                <div class="panel-header">
+                    <h2>Translation <span id="targetTag" class="language-tag">ES-ES</span></h2>
+                </div>
+                <div id="translationOutput" class="output-area">
+                    <div class="placeholder-text">Translation will appear here...</div>
+                </div>
+                <button id="speakButton" class="speak-button" disabled>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                    Speak Translation
+                </button>
+            </div>
+        </div>
+
+        <div id="statusIndicator" class="status-indicator">Connecting...</div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>

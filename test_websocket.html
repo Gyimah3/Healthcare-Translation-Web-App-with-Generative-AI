@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>WebSocket Test</title>
+
+</head>
+<body>
+  <h1>WebSocket Test</h1>
+  <script>
+    const ws = new WebSocket('wss://your-web-socket/ws/medical-translator');
+    ws.onopen = () => {
+      console.log('Connected');
+      ws.send(JSON.stringify({ source_language: 'en-US', target_language: 'es-ES' }));
+    };
+    ws.onmessage = (event) => console.log('Message:', event.data);
+    ws.onerror = (error) => console.error('Error:', error);
+    ws.onclose = () => console.log('Disconnected');
+  </script>
+</body>
+</html>
+
+
+
+<!-- paste the below code on the web console (developper tool) to check your Websocket connection -->
+
+<!-- const ws = new WebSocket('wss://92d2-2c0f-2a80-7ac-1210-c4d5-be90-f9eb-3a3.ngrok-free.app/ws/medical-translator');
+ws.onopen = () => {
+  console.log('Connected');
+  ws.send(JSON.stringify({ source_language: 'en-US', target_language: 'es-ES' }));
+};
+ws.onmessage = (event) => console.log('Message:', event.data);
+ws.onerror = (error) => console.error('Error:', error);
+ws.onclose = () => console.log('Disconnected'); -->
+

@@ -1,0 +1,22 @@
+# Virtual Environment
+venv/
+env/
+.env/
+
+# Environment Variables
+.env
+*.env
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# VS Code settings
+.vscode/
+
+# MacOS specific
+.DS_Store
+
+# Jupyter Notebooks
+.ipynb_checkpoints/

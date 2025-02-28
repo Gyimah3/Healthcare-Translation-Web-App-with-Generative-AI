@@ -1,0 +1,11 @@
+elevenlabs
+assemblyai[extras]
+fastapi 
+uvicorn 
+jinja2 
+python-multipart 
+websockets
+openai
+python-dotenv==1.0.1
+loguru
+pydantic_settings
