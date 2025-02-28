@@ -1,5 +1,5 @@
 elevenlabs
-assemblyai
+assemblyai[extras]
 fastapi 
 uvicorn 
 jinja2 
@@ -11,3 +11,4 @@ loguru
 pydantic_settings
 numpy
 scipy
+PyAudio==0.2.14
