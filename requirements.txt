@@ -1,5 +1,5 @@
 elevenlabs
-assemblyai[extras]
+assemblyai
 fastapi 
 uvicorn 
 jinja2 
