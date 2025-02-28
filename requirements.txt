@@ -9,6 +9,6 @@ openai
 python-dotenv==1.0.1
 loguru
 pydantic_settings
-sounddevice
+pyaudio
 numpy
 scipy
