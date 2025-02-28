@@ -152,7 +152,7 @@ async def websocket_endpoint(websocket: WebSocket):
                 if "bytes" in message:
                     # Audio data received as binary
                     audio_chunk = message["bytes"]
-                    logger.info(f"Received audio chunk: {len(audio_chunk)} bytes, first 20 bytes: {audio_chunk[:20]}")
+                    #logger.info(f"Received audio chunk: {len(audio_chunk)} bytes, first 20 bytes: {audio_chunk[:20]}")
                     audio_queue.put(audio_chunk)
                 elif "text" in message:
                     data = json.loads(message["text"])
@@ -183,7 +183,7 @@ async def websocket_endpoint(websocket: WebSocket):
                             asyncio.to_thread(transcriber.stream, audio_generator())
                         )
                         await websocket.send_json({"type": "listening_started"})
-                        logger.info("Started listening .with audio from WebSocket")
+                        #logger.info("Started listening .with audio from WebSocket")
                     
                     
                     elif command == "stop_listening":
