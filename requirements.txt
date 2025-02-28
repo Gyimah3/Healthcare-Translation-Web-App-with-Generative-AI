@@ -7,3 +7,4 @@ python-multipart
 websockets
 openai
 python-dotenv==1.0.1
+gunicorn
