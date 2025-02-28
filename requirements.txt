@@ -9,3 +9,5 @@ openai
 python-dotenv==1.0.1
 loguru
 pydantic_settings
+pyaudio==0.2.13
+portaudio19-dev

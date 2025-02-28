@@ -1,8 +1,9 @@
 services:
   - type: web
-    buildCommand: pip install -r requirements.txt
-    startCommand: python app.py  # Replace with your actual start command
+    name: healthcare-translation-app
+    env: python
+    buildCommand: ./build.sh
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: 3.11  # Match your Python version
-    preInstallCommand: apt-get update && apt-get install -y portaudio19-dev python3-all-dev
+        value: 3.11
