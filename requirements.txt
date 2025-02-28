@@ -11,4 +11,3 @@ loguru
 pydantic_settings
 numpy
 scipy
-PyAudio==0.2.14
