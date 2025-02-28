@@ -16,6 +16,7 @@ import asyncio
 
 # Load environment variables
 from dotenv import load_dotenv
+import uvicorn
 load_dotenv()
 from library.config import settings
 # Configure logging
@@ -245,3 +246,7 @@ async def websocket_endpoint(websocket: WebSocket):
         logger.error(f"WebSocket error: {str(e)}")
         if transcriber:
             transcriber.close()
+
+
+if __name__ == "__main__":
+    uvicorn.run("main:app", host="0.0.0.0", reload=True, log_level="debug")
