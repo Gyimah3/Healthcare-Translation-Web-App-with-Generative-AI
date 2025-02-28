@@ -1,10 +1,13 @@
-#!/bin/bash
-# Update packages
+#!/usr/bin/env bash
+# exit on error
+set -o errexit
+
+# Update packages and install dependencies
 apt-get update
+apt-get install -y python3-dev
 
-# Install PortAudio development libraries
-apt-get install -y portaudio19-dev python3-all-dev
-
-# Install Python dependencies
+# Upgrade pip and install requirements
 pip install --upgrade pip
 pip install -r requirements.txt
+
+# portaudio19-dev
