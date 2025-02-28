@@ -8,10 +8,4 @@ services:
     envVars:
       - key: PYTHON_VERSION
         value: 3.11
-      - key: OPENAI_API_KEY
-        sync: false
-      - key: ELEVENLABS_API_KEY
-        sync: false
-      - key: ASSEMBLYAI_API_KEY
-        sync: false
     autoDeploy: true
