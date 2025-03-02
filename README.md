@@ -45,6 +45,7 @@ A real-time medical translation system that enables multilingual communication i
 
 `Backend server is live on ->` https://healthcare-translation-web-app-with-ibvg.onrender.com/
 
+**# Note:** **You might experience 50 seconds or more down time before server will respond due to the free resources I'm using on render.**
 ## HTML Demo
 
 The included HTML file provides a simple interface for testing the system before designing the frontend. **Note: This is intended for demonstration and testing purposes only and is not recommended for production use.**
