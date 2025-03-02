@@ -41,7 +41,9 @@ A real-time medical translation system that enables multilingual communication i
 3. Select source and target languages from the dropdown menus
 4. Click the "Start Recording" button to begin speaking
 5. View real-time transcription and translation on screen
-6. Click "Stop Recording" when finished, and play translation 
+6. Click "Stop Recording" when finished, and play translation
+
+`Backend server is live on ->` https://healthcare-translation-web-app-with-ibvg.onrender.com/
 
 ## HTML Demo
 
